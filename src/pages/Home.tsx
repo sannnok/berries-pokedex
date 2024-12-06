@@ -11,8 +11,8 @@ const Home: React.FC = () => {
     const [search, setSearch] = useState<string>("");
 
     const { data: berries = [], error, isLoading } = useQuery<Berry[], Error>({
-        queryKey: ["berries"], // Correctly specify the queryKey
-        queryFn: fetchBerries, // Provide the function to fetch berries
+        queryKey: ["berries"],
+        queryFn: fetchBerries,
     });
 
     if (isLoading) return <div>Loading...</div>;
